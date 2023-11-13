@@ -1,10 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header';
-import About from './components/About';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Header from './Header';
+import About from './About';
+import Portfolio from './Portfolio';
+import Contact from './Contact';
+import Footer from './Footer';
 
 function App() {
   return (
