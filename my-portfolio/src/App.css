@@ -239,19 +239,19 @@ body, h1, h2, h3, p {
 footer {
   text-align: center;
   padding: 20px 0;
-  background-color: #000; /* Black background for the footer */
-  color: #FFFFFF; /* Set the default text color to white for the entire footer */
+  background-color: #000; 
+  color: #FFFFFF;
 }
 
 footer a {
-  color: #FFFFFF; /* Set icons (links) to be white */
+  color: #FFFFFF;
   text-decoration: none;
   margin: 0 10px;
-  font-size: 30px; /* Increase icon size */
+  font-size: 30px; 
 }
 
 footer a:hover {
-  color: #e6d068; /* Color change on hover */
+  color: #e6d068;
 }
 
 footer .text-center {
