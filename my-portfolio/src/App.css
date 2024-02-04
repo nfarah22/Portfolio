@@ -16,10 +16,15 @@ body, h1, h2, h3, p {
 /* Header */
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; 
+  align-items: center; 
   padding: 20px;
   color: #FFFFFF;
+}
+
+.title-container, .navigation {
+  display: flex;
+  align-items: center;
 }
 
 .navigation .nav-link {
@@ -35,65 +40,106 @@ body, h1, h2, h3, p {
 /* About */
 .about-section {
   display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap; 
   align-items: center;
   justify-content: center;
   padding: 50px;
   color: #FFFFFF;
+  min-height: 100vh;
 }
 
 .about-image {
-  flex: 1;
+  flex: 1; 
+  max-width: 300px; 
   text-align: center;
+  margin-right: 100px;
 }
 
 .profile-pic {
   width: 100%;
-  max-width: 300px;
+  max-width: 300px; 
   border-radius: 50%;
-  margin-right: 50px;
-}
-
-.about-content {
-  flex: 2;
-  text-align: left;
-  max-width: 600px;
+  margin-right: 50px; 
 }
 
 .about-content h1 {
-  font-size: 2.5em;
+  font-size: 6em;
+  color: #FDED8B; 
   margin-bottom: 0.5em;
-  color: #FDED8B;
 }
 
-.about-content p {
-  font-size: 1.25em;
-  line-height: 1.6;
-  color: #FFFFFF;
+.about-content {
+  flex: 2; 
+  text-align: left;
+  max-width: 600px; 
+}
+
+
+.tech-icons {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  width: 100%; 
+  flex-basis: 100%;
+  margin-top: 20px;
+}
+
+.tech-icons svg {
+  color: #FFF;
 }
 
 /* Projects */
 .projects-container {
   color: #FFFFFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px; 
 }
 
 .projects-title {
   text-align: center;
   margin-bottom: 40px;
+  color: #FDED8B;
+  font-size: 6em;
 }
 
 .project {
   display: flex;
+  align-items: center;
   margin-bottom: 40px;
+  padding: 10px; 
 }
 
-.project-image {
-  flex: 1;
+.project-layout-left, .project-layout-right {
+  justify-content: space-between; 
+}
+
+.project-layout-left .project-content,
+.project-layout-right .project-content {
+  margin: 0 20px;
+}
+
+.project-layout-left {
+  flex-direction: row;
+}
+
+.project-layout-right {
+  flex-direction: row-reverse;
+}
+
+.project-image img {
+  max-width: 400px; 
+  height: auto;
 }
 
 .project-content {
   flex: 1;
   padding: 20px;
   text-align: left;
+  flex-grow: 2;
 }
 
 .project-title {
@@ -111,23 +157,45 @@ body, h1, h2, h3, p {
 
 .tech-tag {
   display: inline-block;
-  background-color:grey;
+  background-color: grey;
   color: #FDED8B;
   padding: 5px 10px;
   margin-right: 10px;
   border-radius: 5px;
 }
 
+
+.project-image, .project-content {
+  margin: 0 20px;
+}
+
 /* Contact */
 .contact-container {
-  color: #FFFFFF;
-  text-align: center;
-  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  background: #000;
+}
+
+.contact-message {
+  flex: 1;
+  text-align: left;
+  font-size: 2em;
+  color: #FDED8B;
+  margin-right: 50px;
 }
 
 .contact-form {
-  max-width: 600px;
-  margin: auto;
+  flex: 1;
+  padding: 20px;
+  
+}
+
+.contact-title {
+  font-size: 3em;
+  color: #FDED8B;
+  margin-bottom: 0.5em;
 }
 
 .form-label {
@@ -137,42 +205,53 @@ body, h1, h2, h3, p {
 }
 
 .form-control {
-  border: none;
-  color: #FFF;
+  width: 100%;
+  background-color: #FFF;
+  color: #333;
   padding: 10px;
   margin-bottom: 20px;
 }
 
 .form-control:focus {
-  background-color: #333;
+  background-color: #FFF;
   outline: none;
 }
 
+.form-control#message {
+  height: 150px;
+}
+
 .btn-primary {
-  background-color: #FDED8B;
+  background-color: #4CAF50;
+  color: #FFF;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
 }
 
 .btn-primary:hover {
-  background-color: #e6d068;
+  background-color: #45a049;
 }
+
+
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px 0;
+  background-color: #000; /* Black background for the footer */
+  color: #FFFFFF; /* Set the default text color to white for the entire footer */
 }
 
 footer a {
-  color: #FDED8B;
+  color: #FFFFFF; /* Set icons (links) to be white */
   text-decoration: none;
   margin: 0 10px;
+  font-size: 30px; /* Increase icon size */
 }
 
 footer a:hover {
-  color: #e6d068;
+  color: #e6d068; /* Color change on hover */
 }
 
 footer .text-center {
@@ -181,3 +260,4 @@ footer .text-center {
   align-items: center;
   justify-content: center;
 }
+

@@ -24,8 +24,14 @@ function Contact() {
 
   return (
     <section id="contact" className="contact-container">
-      <div className="container my-5">
-        <h2>Contact Me</h2>
+      <div className="contact-message">
+        <h2 className="contact-title">I'm Available for Work!</h2>
+        <p>
+          Let's connect!<br />
+          I'm just a message away. 🚀
+        </p>
+      </div>
+      <div className="contact-form">
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="name" className="form-label">Name</label>
@@ -65,4 +71,3 @@ function Contact() {
 }
 
 export default Contact;
-
