@@ -15,7 +15,7 @@ function About() {
         <h1>Hi I'm Najah</h1>
         <p>Full-Stack Developer pivoting to DevOps, with practical experience in AWS and GitHub Actions through
            'YouTubeSaver'—an interactive platform for engaging with YouTube content.
-           Built 'HireMe' to streamline job hunting for CYF graduates. 
+           Collaboratively built 'HireMe' to streamline job hunting for CYF graduates. 
            Eager to deepen my expertise in cloud technologies and automation.</p>
       </div>
       <div className="tech-icons">
