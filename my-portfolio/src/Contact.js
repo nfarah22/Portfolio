@@ -12,57 +12,57 @@ function Contact() {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-        await axios.post('http://localhost:3001/send-email', formData);
-        alert('Message sent successfully');
-    
+      await axios.post('http://localhost:3001/send-email', formData);
+      alert('Message sent successfully');
     } catch (error) {
-        alert('Error sending message');
-      
+      alert('Error sending message');
     }
-};
+  };
 
   return (
-    <div className="container my-5">
-      <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="nameInput" className="form-label">Name</label>
-          <input 
-            type="text" 
-            className="form-control" 
-            id="name" 
-            value={formData.name} 
-            onChange={handleChange} 
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="emailInput" className="form-label">Email address</label>
-          <input 
-            type="email" 
-            className="form-control" 
-            id="email" 
-            value={formData.email} 
-            onChange={handleChange} 
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="messageTextarea" className="form-label">Message</label>
-          <textarea 
-            className="form-control" 
-            id="message" 
-            rows="3"
-            value={formData.message} 
-            onChange={handleChange}
-          ></textarea>
-        </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
-      </form>
-    </div>
+    <section id="contact" className="contact-container">
+      <div className="container my-5">
+        <h2>Contact Me</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label htmlFor="name" className="form-label">Name</label>
+            <input 
+              type="text" 
+              className="form-control" 
+              id="name" 
+              value={formData.name} 
+              onChange={handleChange} 
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">Email address</label>
+            <input 
+              type="email" 
+              className="form-control" 
+              id="email" 
+              value={formData.email} 
+              onChange={handleChange} 
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="message" className="form-label">Message</label>
+            <textarea 
+              className="form-control" 
+              id="message" 
+              rows="3"
+              value={formData.message} 
+              onChange={handleChange}
+            ></textarea>
+          </div>
+          <button type="submit" className="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </section>
   );
 }
 
 export default Contact;
+

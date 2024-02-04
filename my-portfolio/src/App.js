@@ -1,22 +1,21 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import Header from './Header';
 import About from './About';
-import Portfolio from './Portfolio';
+import Projects from './Projects'; 
 import Contact from './Contact';
 import Footer from './Footer';
+import './App.css'; 
 
 function App() {
   return (
     <Router>
       <div>
         <Header />
-        <Routes>
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <About />
+        <Projects />
+        <Contact />
         <Footer />
       </div>
     </Router>

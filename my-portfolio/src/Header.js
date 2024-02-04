@@ -1,14 +1,18 @@
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 function Header() {
   return (
-    <nav>
-      <ul>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/portfolio">Portfolio</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-      </ul>
-    </nav>
+    <header className="header">
+      <div className="navigation">
+        <h1 className="nav-title">Najah Farah</h1>
+        <Link smooth to="#about" className="nav-link">About</Link>
+        <Link smooth to="#projects" className="nav-link">Projects</Link>
+        <Link smooth to="#contact" className="nav-link">Contact</Link>
+      </div>
+      <div className="title-bio">
+        <p className="bio">Full-Stack Engineer Building End-to-End Solutions.</p>
+      </div>
+    </header>
   );
 }
 
