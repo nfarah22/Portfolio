@@ -15,7 +15,7 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3001/send-email', formData);
+      await axios.post('https://najah-farah.onrender.com/send-email', formData);
       alert('Message sent successfully');
     } catch (error) {
       alert('Error sending message');
