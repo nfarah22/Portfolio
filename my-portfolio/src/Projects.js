@@ -23,7 +23,7 @@ function Projects() {
           </div>
         </div>
         <div className="project-image">
-          <a href="http://youtubesaver.s3-website.eu-north-1.amazonaws.com" target="_blank" rel="noopener noreferrer">
+          <a href="http://youtubesaver2.s3-website.eu-north-1.amazonaws.com/" target="_blank" rel="noopener noreferrer">
             <img src={youtubeSaverImage} alt="YouTubeSaver" />
           </a>
         </div>
